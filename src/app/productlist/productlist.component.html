@@ -1,0 +1,12 @@
+<div class="productsContainer">
+    <div class="productsWrapper">
+        <div *ngFor="let product of productList$|async">
+            <div class="product" routerLink="/products/{{product.id}}">
+                <h1>{{product.name}}</h1>
+                <p>{{product.description}}</p>
+                <span>Price: {{product.price}}</span>
+                <span>Quantity available: {{product.quantity}}</span>
+            </div>
+        </div>
+    </div>
+</div>
